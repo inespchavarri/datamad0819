@@ -6,13 +6,18 @@ my_listComprehension = [1/egg for egg in eggs]
 
 print(my_listComprehension)
 
+
 #Insert here the module/library import statements 
 
-
+import math
+import os
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
+
+square = [i**2 for i in range(1, 21)]
+print(square)
 
 
 
@@ -20,6 +25,8 @@ print(my_listComprehension)
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+power_of_two = [2**i for i in range(1, 51)]
+print(power_of_two)
 
 
 
@@ -27,25 +34,30 @@ print(my_listComprehension)
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
 
-
+sqrt = [math.sqrt(i) for i in range(1, 101)]
+print(sqrt)
 
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+my_list = [-abs(i) for i in range(11)]
+print(my_list)
 
 
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
 
+odds = [i for i in range(1, 101) if i%2 != 0]
+print(odds)
 
 
 
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+divisible_by_seven = [i for i in range(1, 1001) if i%7==0]
+print(divisible_by_seven)
 
 
 #7. Remove all of the vowels in a string. Hint: make a list of the non-vowels. Use non_vowels as the name of the list.
@@ -54,12 +66,18 @@ print(my_listComprehension)
 
 teststring = 'Find all of the words in a string that are monosyllabic'
 
-
+non_vowels = [e for e in teststring if e != "a" and e != "e" and e != "i" and e != "o" and e != "u"]
+print(non_vowels)
 
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
+
+sentence = "The Quick Brown Fox Jumped Over The Lazy Dog"
+
+capital_letters = [e for e in sentence if e.isupper()]
+print(capitl_letters)
 
 
 
@@ -68,15 +86,17 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
+sentence = "The quick brown fox jumped over the lazy dog"
 
-
+consonants = [e for e in sentence if e != "a" and e != "e" and e != "i" and e != "o" and e != "u" ]
+print(consonants)
 
 
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
-
+files = [ ]
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
